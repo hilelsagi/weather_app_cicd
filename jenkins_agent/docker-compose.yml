@@ -1,0 +1,23 @@
+
+services:
+  jenkins:
+    user: root
+    container_name: agent
+    image: jenkins-python
+    networks:
+      - agent
+    ports:
+      - 8080:8080
+      - 50000:50000
+    volumes:
+      - ./jenkins_home:/var/jenkins
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /usr/bin/docker:/usr/bin/docker
+    environment:
+      - JENKINS_URL=http://51.21.208.25:8080/
+      - JENKINS_SECRET=********************************************
+      - JENKINS_AGENT_NAME=agent
+networks:
+  agent:
+    driver: bridge
+~                                    
