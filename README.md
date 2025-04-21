@@ -11,10 +11,6 @@ This repo holds the configuration files for the jenkins server and agent
 
 This repo also holds the Jenkinsfile
 
-The original weather app src is in a selfhosted GitLab-ce server
-
-and was copied to Github without the Jenkinsfile
-
 
 ## Links:
 
